@@ -7,15 +7,93 @@
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+
+    <!-- Fotografía Principal / Hero: Dr. Erick Ponce en Consultorio -->
     <image:image>
       <image:loc>https://drerickponceortopeda.com/assets/img/dr-erick-ponce-hero.webp</image:loc>
       <image:title>Dr. Erick Ponce - Cirujano Ortopeda y Traumatólogo en San Pedro Sula y Alrededores</image:title>
-      <image:caption>Dr. Erick Ponce, especialista en Ortopedia, Traumatología, Artroscopia y Medicina Deportiva en San Pedro Sula, Choloma, Villanueva, El Progreso y todo el Valle de Sula, Cortés, Honduras.</image:caption>
+      <image:caption>Dr. Erick Ponce, médico especialista en Ortopedia, Traumatología, Artroscopia y Cirugía de Fracturas en San Pedro Sula, Choloma, Villanueva, El Progreso y todo el Valle de Sula, Cortés, Honduras.</image:caption>
+      <image:geo_location>San Pedro Sula, Cortés, Honduras</image:geo_location>
     </image:image>
+
+    <!-- Fotografía Consulta Clínica: Dr. Erick Ponce con Modelo Anatómico Óseo -->
     <image:image>
       <image:loc>https://drerickponceortopeda.com/assets/img/dr-erick-ponce-consulta.webp</image:loc>
-      <image:title>Consulta Ortopédica con el Dr. Erick Ponce en San Pedro Sula y Valle de Sula</image:title>
-      <image:caption>Atención médica especializada en lesiones de rodilla, artroscopia, fracturas y manguito rotador en San Pedro Sula, Honduras.</image:caption>
+      <image:title>Consulta de Ortopedia y Traumatología con el Dr. Erick Ponce en San Pedro Sula</image:title>
+      <image:caption>Dr. Erick Ponce evaluando modelo óseo en consulta médica en San Pedro Sula. Diagnóstico y tratamiento de lesiones de rodilla, artroscopia, fracturas complejas, artrosis y dolor articular en Valle de Sula.</image:caption>
+      <image:geo_location>San Pedro Sula, Cortés, Honduras</image:geo_location>
+    </image:image>
+
+    <!-- Retrato Profesional: Dr. Erick Ponce en Bata Médica -->
+    <image:image>
+      <image:loc>https://drerickponceortopeda.com/assets/img/dr-erick-ponce-recursos.webp</image:loc>
+      <image:title>Dr. Erick Ponce - Especialista en Artroscopia, Medicina Deportiva y Rehabilitación</image:title>
+      <image:caption>Retrato profesional del Dr. Erick Ponce, cirujano ortopeda con fellowship en artroscopia y medicina del deporte en Argentina. Atención en Hospital Betesda, Clínica Fe y Esperanza y San Pedro Sula.</image:caption>
+      <image:geo_location>San Pedro Sula, Cortés, Honduras</image:geo_location>
+    </image:image>
+
+    <!-- Banner Oficial Open Graph / WhatsApp del Dr. Erick Ponce -->
+    <image:image>
+      <image:loc>https://drerickponceortopeda.com/assets/img/og-dr-erick-ponce.webp</image:loc>
+      <image:title>Dr. Erick Ponce | Perfil Médico de Ortopedia y Traumatología en Honduras</image:title>
+      <image:caption>Tarjeta de presentación médica y contacto para citas con el Dr. Erick Ponce en San Pedro Sula y Valle de Sula.</image:caption>
+      <image:geo_location>San Pedro Sula, Cortés, Honduras</image:geo_location>
+    </image:image>
+
+    <!-- Logo Oficial Dr. Erick Ponce -->
+    <image:image>
+      <image:loc>https://drerickponceortopeda.com/assets/img/logo-ep.webp</image:loc>
+      <image:title>Logo Oficial Dr. Erick Ponce - Ortopedia y Traumatología</image:title>
+      <image:caption>Identidad visual médica del Dr. Erick Ponce, especialista ortopeda y traumatólogo en San Pedro Sula.</image:caption>
+      <image:geo_location>San Pedro Sula, Cortés, Honduras</image:geo_location>
+    </image:image>
+
+    <!-- Servicio 1: Fracturas y Traumatología de Urgencia -->
+    <image:image>
+      <image:loc>https://drerickponceortopeda.com/assets/img/servicios/fracturas.webp</image:loc>
+      <image:title>Tratamiento de Fracturas y Traumatología de Urgencia en San Pedro Sula - Dr. Erick Ponce</image:title>
+      <image:caption>Manejo clínico y fijación quirúrgica anatómica de fracturas en adultos y niños las 24 horas del día en San Pedro Sula por el cirujano traumatólogo Dr. Erick Ponce.</image:caption>
+      <image:geo_location>San Pedro Sula, Cortés, Honduras</image:geo_location>
+    </image:image>
+
+    <!-- Servicio 2: Lesiones de Rodilla y Artroscopia -->
+    <image:image>
+      <image:loc>https://drerickponceortopeda.com/assets/img/servicios/rodilla.webp</image:loc>
+      <image:title>Cirugía Artroscópica de Rodilla, Meniscos y Ligamento Cruzado en San Pedro Sula - Dr. Erick Ponce</image:title>
+      <image:caption>Cirugía de mínima invasión para rotura de meniscos, reconstrucción de ligamento cruzado anterior (LCA) y desgaste de cartílago en San Pedro Sula con el Dr. Erick Ponce.</image:caption>
+      <image:geo_location>San Pedro Sula, Cortés, Honduras</image:geo_location>
+    </image:image>
+
+    <!-- Servicio 3: Hombro y Manguito Rotador -->
+    <image:image>
+      <image:loc>https://drerickponceortopeda.com/assets/img/servicios/hombro.webp</image:loc>
+      <image:title>Cirugía de Hombro y Reparación del Manguito Rotador en San Pedro Sula - Dr. Erick Ponce</image:title>
+      <image:caption>Tratamiento artroscópico de tendinitis, rotura del manguito rotador, inestabilidad de hombro y dolor articular en Cortés con el especialista Dr. Erick Ponce.</image:caption>
+      <image:geo_location>San Pedro Sula, Cortés, Honduras</image:geo_location>
+    </image:image>
+
+    <!-- Servicio 4: Medicina Deportiva y Artroscopia -->
+    <image:image>
+      <image:loc>https://drerickponceortopeda.com/assets/img/servicios/medicina-deportiva.webp</image:loc>
+      <image:title>Medicina Deportiva y Traumatología del Deporte en San Pedro Sula - Dr. Erick Ponce</image:title>
+      <image:caption>Atención y rehabilitación de atletas profesionales y deportistas aficionados por el Dr. Erick Ponce, subespecialista en medicina deportiva en San Pedro Sula.</image:caption>
+      <image:geo_location>San Pedro Sula, Cortés, Honduras</image:geo_location>
+    </image:image>
+
+    <!-- Servicio 5: Terapias Biológicas y Viscosuplementación -->
+    <image:image>
+      <image:loc>https://drerickponceortopeda.com/assets/img/servicios/terapias-biologicas.webp</image:loc>
+      <image:title>Plasma Rico en Plaquetas (PRP) e Infiltraciones de Rodilla en San Pedro Sula - Dr. Erick Ponce</image:title>
+      <image:caption>Tratamiento ortobiológico regenerativo con Plasma Rico en Plaquetas (PRP) y viscosuplementación con ácido hialurónico para artrosis en San Pedro Sula.</image:caption>
+      <image:geo_location>San Pedro Sula, Cortés, Honduras</image:geo_location>
+    </image:image>
+
+    <!-- Servicio 6: Ortopedia General y Columna -->
+    <image:image>
+      <image:loc>https://drerickponceortopeda.com/assets/img/servicios/ortopedia-general.webp</image:loc>
+      <image:title>Ortopedia General, Dolor Lumbar de Columna y Cadera en San Pedro Sula - Dr. Erick Ponce</image:title>
+      <image:caption>Evaluación de lumbalgia, ciática, artrosis de cadera, fascitis plantar y afecciones del sistema músculo-esquelético en San Pedro Sula con el Dr. Erick Ponce.</image:caption>
+      <image:geo_location>San Pedro Sula, Cortés, Honduras</image:geo_location>
     </image:image>
   </url>
 </urlset>

@@ -4,6 +4,11 @@
 User-agent: *
 Allow: /
 
+# Rastreador de Imágenes de Google (Googlebot-Image)
+User-agent: Googlebot-Image
+Allow: /
+Allow: /assets/img/
+
 # Motores de búsqueda generales
 User-agent: Googlebot
 Allow: /

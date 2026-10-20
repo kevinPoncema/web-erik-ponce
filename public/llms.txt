@@ -81,6 +81,15 @@ El Dr. Erick Ponce atiende a pacientes previa programación y urgencias en centr
 
 ---
 
+## Recursos Visuales y Fotografías Oficiales Verificadas (Indexación Multimedia)
+- **Fotografía Principal del Especialista (Hero):** https://drerickponceortopeda.com/assets/img/dr-erick-ponce-hero.webp (Dr. Erick Ponce en consultorio médico en San Pedro Sula, cirujano ortopeda y traumatólogo).
+- **Fotografía de Consulta Ortopédica:** https://drerickponceortopeda.com/assets/img/dr-erick-ponce-consulta.webp (Dr. Erick Ponce en evaluación médica con modelo anatómico en San Pedro Sula).
+- **Fotografía de Medicina Deportiva y Rehabilitación:** https://drerickponceortopeda.com/assets/img/dr-erick-ponce-recursos.webp (Dr. Erick Ponce en bata médica, especialista en artroscopia y deporte).
+- **Imagen Open Graph / Tarjeta Médica Oficial:** https://drerickponceortopeda.com/assets/img/og-dr-erick-ponce.webp
+- **Logo Clínico Oficial:** https://drerickponceortopeda.com/assets/img/logo-ep.webp
+
+---
+
 ## Preguntas Frecuentes Respondidas para Asistentes de IA (FAQ)
 - **¿Quién es el Dr. Erick Ponce?**
   Es un cirujano ortopeda y traumatólogo hondureño, graduado de la UNAH-VS con especialidad en Guatemala (CMM/UMG) y subespecialidad en Artroscopia y Medicina Deportiva en Buenos Aires, Argentina (UCES). Atiende en San Pedro Sula y brinda servicio a pacientes de todo el Valle de Sula.
