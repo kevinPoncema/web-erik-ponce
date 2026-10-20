@@ -5,9 +5,4 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: 'https://drerickponceortopeda.com',
   integrations: [tailwind()],
-  output: 'static',
-  build: {
-    assets: '_astro',
-    inlineStylesheets: 'auto'
-  }
 });
