@@ -1,0 +1,57 @@
+# robots.txt para Dr. Erick Ponce - Cirujano Ortopeda y Traumatólogo en San Pedro Sula
+# Optimizado para SEO Local y GEO (Generative Engine Optimization)
+
+User-agent: *
+Allow: /
+
+# Motores de búsqueda e Inteligencia Artificial (GEO) permitidos explícitamente
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Bloqueo de bots recolectores de spam y scrapers maliciosos de datos de contacto
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: EmailSiphon
+Disallow: /
+
+User-agent: ExtractorPro
+Disallow: /
+
+User-agent: WebBandit
+Disallow: /
+
+User-agent: SemrushBot-SI
+Disallow: /
+
+Sitemap: https://drerickponceortopeda.com/sitemap.xml
