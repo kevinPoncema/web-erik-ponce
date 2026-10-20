@@ -1,0 +1,82 @@
+---
+import { FAQ_LIST } from '../data/doctorData';
+---
+
+<section id="preguntas" class="py-16 lg:py-24 bg-slate-50 border-t border-slate-200/80">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-medical-100 text-medical-800 text-xs font-bold uppercase tracking-wider mb-3">
+        <span>Preguntas Frecuentes (FAQ)</span>
+      </div>
+      <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-medical-950 tracking-tight">
+        Resolvemos tus dudas antes de la{" "}
+        <span class="text-medical-600">consulta médica</span>
+      </h2>
+      <p class="mt-3 text-base text-slate-600">
+        Información clara sobre citas, preparación para consulta, urgencias por fracturas y valoraciones quirúrgicas en San Pedro Sula.
+      </p>
+    </div>
+
+    <!-- Collapsible Accordion -->
+    <div class="space-y-4">
+      {FAQ_LIST.map((faq, index) => (
+        <div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm overflow-hidden transition-all">
+          <button
+            type="button"
+            data-accordion-trigger
+            data-accordion-group="faq"
+            aria-expanded={index === 0 ? "true" : "false"}
+            aria-controls={`faq-answer-${index}`}
+            class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-medical-50/40 transition-colors focus:outline-none"
+          >
+            <span class="font-heading font-bold text-base sm:text-lg text-medical-950">
+              {faq.question}
+            </span>
+            <span
+              data-accordion-icon
+              class={`w-9 h-9 rounded-xl bg-medical-50 text-medical-700 flex items-center justify-center shrink-0 transition-transform duration-200 ${index === 0 ? "rotate-180" : ""}`}
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </button>
+
+          <div
+            id={`faq-answer-${index}`}
+            class={`px-6 pb-6 pt-2 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 ${index === 0 ? "" : "hidden"}`}
+          >
+            <p>{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Extra CTA under FAQ -->
+    <div class="mt-10 text-center bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="text-left">
+        <p class="font-heading font-bold text-base text-medical-950">
+          ¿Tienes otra pregunta sobre tu caso médico?
+        </p>
+        <p class="text-xs sm:text-sm text-slate-500">
+          Escríbenos directamente y con gusto te orientaremos sobre tu consulta en San Pedro Sula.
+        </p>
+      </div>
+      <a
+        href="#contacto-seguro"
+        data-protected-contact="whatsapp"
+        data-wa-api="true"
+        data-wa-text="Hola Dr. Erick Ponce, tengo una duda sobre una consulta ortopédica en San Pedro Sula."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="shrink-0 inline-flex items-center gap-2 bg-medical-700 hover:bg-medical-800 text-white font-semibold text-sm px-5 py-3 rounded-xl transition-colors"
+      >
+        <span>Escribir por WhatsApp</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,120 @@
+---
+import { ACADEMIC_CREDENTIALS, DOCTOR_INFO } from '../data/doctorData';
+---
+
+<section id="especialista" class="py-16 lg:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+      <!-- Left Column: Secondary Image & Clinical Philosophy Card (5 cols) -->
+      <div class="lg:col-span-5 order-2 lg:order-1">
+        <div class="relative mx-auto max-w-md lg:max-w-none">
+          <div class="rounded-3xl overflow-hidden shadow-clinical-lg border border-slate-200 bg-medical-950">
+            <img
+              src="./assets/img/dr-erick-ponce-consulta.webp"
+              alt="Dr. Erick Ponce en consulta de Ortopedia y Traumatología en San Pedro Sula, Cortés"
+              width="600"
+              height="680"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+
+          <!-- Quote / Empathy Card inspired by reference design -->
+          <blockquote class="mt-6 p-6 rounded-2xl bg-medical-50/80 border-l-4 border-tealMed-500 text-slate-700 shadow-sm">
+            <p class="text-sm sm:text-base italic font-medium leading-relaxed text-medical-950">
+              “Mi compromiso es brindar un diagnóstico certero y un trato humano, acompañando a cada paciente desde el alivio del dolor hasta su recuperación funcional plena.”
+            </p>
+            <footer class="mt-2.5 text-xs font-bold uppercase tracking-wider text-tealMed-700">
+              — Dr. Erick Ponce · Ortopedia y Traumatología
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Right Column: Biography & Academic Credentials (7 cols) -->
+      <div class="lg:col-span-7 order-1 lg:order-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tealMed-50 text-tealMed-700 text-xs font-bold uppercase tracking-wider mb-3">
+          <span>Conoce al Especialista</span>
+        </div>
+
+        <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-medical-950 tracking-tight leading-tight mb-4">
+          Dr. Erick Ponce — Especialista en{" "}
+          <span class="text-tealMed-600">Medicina Deportiva, Artroscopia y Trauma</span>
+        </h2>
+
+        <p class="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
+          El <strong>Dr. Erick Ponce</strong> se dedica a ofrecer servicios médicos y quirúrgicos altamente especializados en el diagnóstico, tratamiento y prevención de lesiones del sistema músculo-esquelético en <strong>San Pedro Sula, Honduras</strong>.
+        </p>
+
+        <p class="text-slate-600 text-base leading-relaxed mb-8">
+          Su práctica combina un <strong>trato empático y cercano con el paciente</strong> junto con técnicas modernas de preservación articular, manejo integral de fracturas en niños y adultos, terapias ortobiológicas (PRP) y cirugía artroscópica de mínima invasión en rodilla y hombro, priorizando siempre una recuperación segura y funcional.
+        </p>
+
+        <!-- Academic Credentials Timeline -->
+        <div class="space-y-4 mb-8">
+          <h3 class="font-heading text-sm font-bold uppercase tracking-wider text-medical-700">
+            Formación Académica y Alta Especialidad
+          </h3>
+
+          {ACADEMIC_CREDENTIALS.map((cred) => (
+            <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-medical-300 transition-colors flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-medical-700 text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <h4 class="font-heading font-bold text-base sm:text-lg text-medical-950">
+                    {cred.degree}
+                  </h4>
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-medical-100 text-medical-800">
+                    {cred.periodOrTag}
+                  </span>
+                </div>
+                <p class="text-sm font-semibold text-medical-700 mt-0.5">
+                  {cred.institution} — <span class="text-slate-500 font-normal">{cred.location}</span>
+                </p>
+                <p class="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">
+                  {cred.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Verified Medical Profiles & CTA -->
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a
+            href="#contacto-seguro"
+            data-protected-contact="whatsapp"
+            data-wa-api="true"
+            data-wa-text="Hola Dr. Erick Ponce, vi su perfil médico y quisiera agendar una consulta."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-medical-700 hover:bg-medical-800 text-white font-semibold text-sm px-6 py-3.5 rounded-xl shadow-sm transition-colors"
+          >
+            <span>Agendar Valoración con el Especialista</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+
+          <a
+            href={DOCTOR_INFO.doctoresDeHondurasUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-sm font-semibold text-medical-700 hover:text-medical-900 px-4 py-3 rounded-xl border border-slate-200 hover:bg-slate-50 transition-colors"
+          >
+            <span>Ver Ficha en Doctores de Honduras</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

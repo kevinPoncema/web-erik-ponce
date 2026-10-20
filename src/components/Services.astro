@@ -1,0 +1,85 @@
+---
+import { SERVICES_LIST } from '../data/doctorData';
+---
+
+<section id="servicios" class="py-16 lg:py-24 bg-slate-100/80 border-t border-slate-200/70">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="max-w-3xl mx-auto text-center mb-12 lg:mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-medical-100 text-medical-800 text-xs font-bold uppercase tracking-wider mb-3">
+        <span>Servicios Profesionales</span>
+      </div>
+      <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-medical-950 tracking-tight">
+        Explora cómo podemos contribuir en{" "}
+        <span class="text-medical-600">tu bienestar y movilidad</span>
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+        Diagnóstico preciso y tratamientos personalizados quirúrgicos y no quirúrgicos para lesiones articulares, óseas y deportivas en San Pedro Sula.
+      </p>
+    </div>
+
+    <!-- Responsive Cards Grid: 1 col mobile, 2 cols tablet, 3 cols desktop -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8">
+      {SERVICES_LIST.map((service) => (
+        <article class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-clinical hover:shadow-clinical-lg transition-all duration-300 flex flex-col">
+          <!-- Procedure Image with Category Badge -->
+          <div class="relative overflow-hidden aspect-[3/2] bg-slate-200">
+            <img
+              src={service.image}
+              alt={service.imageAlt}
+              width="600"
+              height="400"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-medical-950/60 via-transparent to-transparent"></div>
+            <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-bold bg-medical-900/90 text-white backdrop-blur-sm border border-white/15 shadow-sm">
+              {service.badge}
+            </span>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-heading text-xl font-extrabold text-medical-950 group-hover:text-medical-600 transition-colors mb-2.5">
+                {service.title}
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                {service.description}
+              </p>
+
+              <!-- Key conditions treated list -->
+              <ul class="space-y-1.5 mb-6 border-t border-slate-100 pt-3.5">
+                {service.highlights.map((point) => (
+                  <li class="flex items-start gap-2 text-xs sm:text-sm text-slate-700">
+                    <svg class="w-4 h-4 text-tealMed-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <!-- Direct WhatsApp Button (Protected against scrapers) -->
+            <a
+              href="#contacto-seguro"
+              data-protected-contact="whatsapp"
+              data-wa-api="true"
+              data-wa-text={service.whatsappText}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full inline-flex items-center justify-center gap-2 bg-medical-50 hover:bg-whatsapp text-medical-800 hover:text-white font-bold text-sm px-4 py-3 rounded-xl border border-medical-200 hover:border-whatsapp transition-all duration-200"
+            >
+              <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771z" />
+              </svg>
+              <span>Consultar este Tratamiento</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

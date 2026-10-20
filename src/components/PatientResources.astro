@@ -1,0 +1,85 @@
+---
+import { PATIENT_RESOURCES } from '../data/doctorData';
+---
+
+<section aria-label="Enfoque centrado en el paciente y recursos educativos" class="bg-medical-950 text-white py-16 lg:py-20 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <!-- Left Column: Collaborative Patient Approach -->
+      <div class="lg:col-span-5">
+        <span class="inline-block px-3 py-1 rounded-full bg-tealMed-500/20 text-tealMed-100 text-xs font-bold uppercase tracking-wider mb-3 border border-tealMed-500/30">
+          Atención Centrada en el Paciente
+        </span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-white leading-tight mb-4">
+          Un Enfoque Colaborativo y Transparente para tu Recuperación
+        </h2>
+        <p class="text-medical-100/90 text-sm sm:text-base leading-relaxed mb-6">
+          Destacamos por nuestra calidez humana, ética médica y compromiso con la excelencia en cada etapa de tu tratamiento. Escuchamos tus necesidades y trabajamos en conjunto contigo para tomar decisiones informadas sobre tu salud articular.
+        </p>
+        <div class="grid grid-cols-2 gap-4 pt-2">
+          <div class="p-4 rounded-xl bg-medical-900/70 border border-medical-800">
+            <p class="text-tealMed-400 font-heading font-extrabold text-xl">100%</p>
+            <p class="text-xs text-medical-200 mt-1">Explicación clara de tu diagnóstico e imágenes</p>
+          </div>
+          <div class="p-4 rounded-xl bg-medical-900/70 border border-medical-800">
+            <p class="text-tealMed-400 font-heading font-extrabold text-xl">Paso a Paso</p>
+            <p class="text-xs text-medical-200 mt-1">Acompañamiento en tu rehabilitación física</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Patient Resource Guides -->
+      <div class="lg:col-span-7 space-y-3.5">
+        <div class="mb-2">
+          <h3 class="font-heading text-lg font-bold text-medical-200">
+            Recursos y Guías Rápidas para el Paciente
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Recomendaciones clínicas antes y después de tu consulta ortopédica en San Pedro Sula:
+          </p>
+        </div>
+
+        {PATIENT_RESOURCES.map((res, idx) => (
+          <div class="rounded-2xl bg-white text-slate-800 shadow-md overflow-hidden border border-slate-100">
+            <button
+              type="button"
+              data-accordion-trigger
+              data-accordion-group="resources"
+              aria-expanded={idx === 0 ? "true" : "false"}
+              aria-controls={`resource-panel-${idx}`}
+              class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 hover:bg-slate-50 transition-colors focus:outline-none"
+            >
+              <div>
+                <h4 class="font-heading font-bold text-sm sm:text-base text-medical-950">
+                  {res.title}
+                </h4>
+                <p class="text-xs text-slate-500 mt-0.5">{res.summary}</p>
+              </div>
+              <span
+                data-accordion-icon
+                class={`w-8 h-8 rounded-lg bg-medical-50 text-medical-700 flex items-center justify-center shrink-0 transition-transform duration-200 ${idx === 0 ? "rotate-180" : ""}`}
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </button>
+            <div
+              id={`resource-panel-${idx}`}
+              class={`px-5 pb-4 pt-1 border-t border-slate-100 bg-slate-50/60 ${idx === 0 ? "" : "hidden"}`}
+            >
+              <ul class="space-y-2 mt-2">
+                {res.tips.map((tip) => (
+                  <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
+                    <span class="w-1.5 h-1.5 rounded-full bg-tealMed-500 mt-2 shrink-0"></span>
+                    <span>{tip}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

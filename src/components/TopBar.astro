@@ -1,0 +1,74 @@
+---
+import { DOCTOR_INFO } from '../data/doctorData';
+---
+
+<div class="bg-medical-950 text-slate-200 text-xs sm:text-sm border-b border-medical-800/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-y-2 gap-x-6">
+    <!-- Left message / Location -->
+    <div class="flex items-center gap-4 flex-wrap">
+      <span class="inline-flex items-center gap-1.5 text-medical-200 font-medium">
+        <svg class="w-4 h-4 text-medical-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <span>San Pedro Sula, Cortés, Honduras</span>
+      </span>
+      <span class="hidden md:inline-block text-medical-700" aria-hidden="true">|</span>
+      <span class="hidden lg:inline-block text-slate-300">
+        Cirugía Ortopédica, Artroscopia y Traumatología enfocada en restaurar tu calidad de vida
+      </span>
+    </div>
+
+    <!-- Right Quick Contact Details (Protected against scrapers) -->
+    <div class="flex items-center gap-4 sm:gap-6 ml-auto">
+      <a
+        href="#contacto-seguro"
+        data-protected-contact="whatsapp"
+        data-wa-api="true"
+        data-wa-text="Hola Dr. Erick Ponce, quisiera agendar una consulta médica en San Pedro Sula."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 hover:text-white transition-colors"
+        aria-label="Contactar por WhatsApp o llamadas al Dr. Erick Ponce"
+      >
+        <svg class="w-4 h-4 text-whatsapp shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        <span class="font-semibold tracking-wide" data-obf-phone>+504 3191&#8203;-3419</span>
+      </a>
+
+      <a
+        href="#contacto-seguro"
+        data-protected-contact="email"
+        class="hidden sm:inline-flex items-center gap-1.5 hover:text-white transition-colors"
+        aria-label="Enviar correo electrónico al Dr. Erick Ponce"
+      >
+        <svg class="w-4 h-4 text-medical-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        <span data-obf-email>eponce2290&#8203;@hotmail.com</span>
+      </a>
+
+      <div class="hidden xl:flex items-center gap-3 pl-2 border-l border-medical-800">
+        <a
+          href={DOCTOR_INFO.instagramUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-slate-300 hover:text-medical-300 transition-colors text-xs font-medium"
+          title="Instagram Oficial del Dr. Erick Ponce"
+        >
+          IG: {DOCTOR_INFO.instagramHandle}
+        </a>
+        <a
+          href={DOCTOR_INFO.doctoresDeHondurasUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-medical-900/90 hover:bg-medical-800 text-medical-200 px-2.5 py-0.5 rounded-full text-xs border border-medical-700/60 transition-colors"
+          title="Perfil verificado en Doctores de Honduras"
+        >
+          Doctores de Honduras ✓
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

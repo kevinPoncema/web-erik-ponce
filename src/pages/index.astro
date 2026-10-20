@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TopBar from '../components/TopBar.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import MetricsBar from '../components/MetricsBar.astro';
+import AboutSpecialist from '../components/AboutSpecialist.astro';
+import Services from '../components/Services.astro';
+import PatientResources from '../components/PatientResources.astro';
+import LocationContact from '../components/LocationContact.astro';
+import Faq from '../components/Faq.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFab from '../components/WhatsAppFab.astro';
+---
+
+<Layout
+  title="Dr. Erick Ponce | Ortopeda y Traumatólogo en San Pedro Sula"
+  description="Consulta con el Dr. Erick Ponce en San Pedro Sula. Especialista en Ortopedia, Traumatología, lesiones de rodilla, manguito rotador y fracturas. Agenda al +504 3191-3419."
+>
+  <TopBar />
+  <Navbar />
+  <main id="contenido-principal">
+    <Hero />
+    <MetricsBar />
+    <AboutSpecialist />
+    <Services />
+    <PatientResources />
+    <LocationContact />
+    <Faq />
+  </main>
+  <Footer />
+  <WhatsAppFab />
+</Layout>

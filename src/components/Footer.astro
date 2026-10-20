@@ -1,0 +1,149 @@
+---
+import { DOCTOR_INFO } from '../data/doctorData';
+---
+
+<footer class="bg-medical-950 text-slate-300 border-t border-medical-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+      <!-- Column 1: Brand & Medical Summary (4 cols) -->
+      <div class="lg:col-span-4 space-y-4">
+        <a href="#inicio" class="inline-flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-medical-700 to-tealMed-600 flex items-center justify-center text-white shadow-md">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v4m0 10v4M5.636 5.636l2.828 2.828m7.072 7.072l2.828 2.828M3 12h4m10 0h4M5.636 18.364l2.828-2.828m7.072-7.072l2.828-2.828" />
+              <circle cx="12" cy="12" r="3.5" fill="currentColor" class="text-tealMed-400" />
+            </svg>
+          </div>
+          <div>
+            <span class="block font-heading font-extrabold text-lg text-white leading-tight">
+              Dr. Erick Ponce
+            </span>
+            <span class="block text-xs font-medium text-tealMed-400">
+              Cirujano Ortopeda y Traumatólogo
+            </span>
+          </div>
+        </a>
+
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+          Especialista en Ortopedia, Traumatología, Artroscopia y Medicina del Deporte en San Pedro Sula, Cortés, Honduras. Comprometido con restaurar tu movilidad y calidad de vida mediante tratamientos seguros y basados en evidencia.
+        </p>
+
+        <!-- Social & Directory Icons -->
+        <div class="flex items-center gap-3 pt-1">
+          <a
+            href={DOCTOR_INFO.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram Oficial del Dr. Erick Ponce"
+            class="w-10 h-10 rounded-xl bg-medical-900 hover:bg-pink-600 text-slate-200 hover:text-white flex items-center justify-center transition-colors border border-medical-800"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+
+          <a
+            href="#contacto-seguro"
+            data-protected-contact="whatsapp"
+            data-wa-api="true"
+            data-wa-text="Hola Dr. Erick Ponce, quisiera agendar una consulta médica."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp Oficial del Dr. Erick Ponce"
+            class="w-10 h-10 rounded-xl bg-medical-900 hover:bg-whatsapp text-slate-200 hover:text-white flex items-center justify-center transition-colors border border-medical-800"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771z" />
+            </svg>
+          </a>
+
+          <a
+            href={DOCTOR_INFO.doctoresDeHondurasUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Perfil en Doctores de Honduras"
+            class="px-3.5 h-10 rounded-xl bg-medical-900 hover:bg-medical-800 text-xs font-semibold text-medical-200 flex items-center gap-1.5 transition-colors border border-medical-800"
+          >
+            <span>Doctores de Honduras</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Especialidades (3 cols) -->
+      <div class="lg:col-span-3">
+        <h3 class="font-heading font-bold text-sm uppercase tracking-wider text-white mb-4">
+          Especialidades
+        </h3>
+        <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400">
+          <li><a href="#servicios" class="hover:text-tealMed-400 transition-colors">— Fracturas y Traumatología 24/7</a></li>
+          <li><a href="#servicios" class="hover:text-tealMed-400 transition-colors">— Artroscopia de Rodilla y Meniscos</a></li>
+          <li><a href="#servicios" class="hover:text-tealMed-400 transition-colors">— Hombro y Manguito Rotador</a></li>
+          <li><a href="#servicios" class="hover:text-tealMed-400 transition-colors">— Medicina Deportiva</a></li>
+          <li><a href="#servicios" class="hover:text-tealMed-400 transition-colors">— Plasma Rico en Plaquetas (PRP)</a></li>
+          <li><a href="#servicios" class="hover:text-tealMed-400 transition-colors">— Ortopedia General y Columna</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Navegación Rápida (2 cols) -->
+      <div class="lg:col-span-2">
+        <h3 class="font-heading font-bold text-sm uppercase tracking-wider text-white mb-4">
+          De Interés
+        </h3>
+        <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400">
+          <li><a href="#inicio" class="hover:text-tealMed-400 transition-colors">— Inicio</a></li>
+          <li><a href="#especialista" class="hover:text-tealMed-400 transition-colors">— Conoce al Doctor</a></li>
+          <li><a href="#servicios" class="hover:text-tealMed-400 transition-colors">— Tratamientos</a></li>
+          <li><a href="#preguntas" class="hover:text-tealMed-400 transition-colors">— Preguntas Frecuentes</a></li>
+          <li><a href="#contacto" class="hover:text-tealMed-400 transition-colors">— Ubicación y Citas</a></li>
+          <li><a href="/llms.txt" class="hover:text-tealMed-400 transition-colors">— Información IA (llms.txt)</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Información de Contacto (3 cols) -->
+      <div class="lg:col-span-3 space-y-3">
+        <h3 class="font-heading font-bold text-sm uppercase tracking-wider text-white mb-4">
+          Información de Contacto
+        </h3>
+        <p class="text-xs text-slate-400">Llamadas y WhatsApp de Citas:</p>
+        <p class="text-base font-extrabold text-white">
+          <a
+            href="#contacto-seguro"
+            data-protected-contact="tel"
+            class="hover:text-whatsapp transition-colors"
+            data-obf-phone
+          >
+            +504 3191&#8203;-3419
+          </a>
+        </p>
+        <p class="text-xs text-slate-400 pt-1">Correo electrónico:</p>
+        <p class="text-xs sm:text-sm font-semibold text-medical-200 break-all">
+          <a
+            href="#contacto-seguro"
+            data-protected-contact="email"
+            class="hover:text-white transition-colors"
+            data-obf-email
+          >
+            eponce2290&#8203;@hotmail.com
+          </a>
+        </p>
+        <p class="text-xs text-slate-400 pt-1 leading-relaxed">
+          📍 Hospital Betesda, Clínica Fe y Esperanza y Clínicas Médicas OGYNE.<br />
+          San Pedro Sula, Cortés, Honduras (211101).
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom Legal & Privacy Notice -->
+    <div class="mt-12 pt-8 border-t border-medical-900/90 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <p>
+        &copy; 2026 <strong>Dr. Erick Ponce | Cirujano Ortopeda y Traumatólogo</strong>. Todos los derechos reservados.
+      </p>
+      <p class="text-center sm:text-right max-w-xl">
+        <strong>Aviso de Privacidad Médica:</strong> La información publicada en este sitio tiene fines informativos y educativos; no sustituye una consulta médica presencial. Los datos compartidos por el paciente son confidenciales bajo secreto profesional médico.
+      </p>
+    </div>
+  </div>
+</footer>
