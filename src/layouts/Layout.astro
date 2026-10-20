@@ -7,45 +7,41 @@ interface Props {
 }
 
 const {
-  title = "Dr. Erick Ponce | Ortopeda y Traumatólogo en San Pedro Sula y Alrededores",
-  description = "Consulta médica con el Dr. Erick Ponce en San Pedro Sula y todo el Valle de Sula (Choloma, Villanueva, El Progreso, La Lima). Especialista en Ortopedia, Traumatología, artroscopia de rodilla, fracturas y manguito rotador. Agenda al +504 3191-3419.",
+  title = "Dr. Erick Ponce | Ortopeda en San Pedro Sula y Valle de Sula",
+  description = "Consulta con el Dr. Erick Ponce en San Pedro Sula y Valle de Sula. Ortopeda y traumatólogo: artroscopia de rodilla, fracturas y hombro. Citas: +504 3191-3419.",
 } = Astro.props;
 
 const canonicalURL = "https://drerickponceortopeda.com/";
 const ogImageURL = "https://drerickponceortopeda.com/assets/img/og-dr-erick-ponce.webp";
 
-const physicianSchema = {
+const comprehensiveMedicalSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Physician",
+      "@type": ["Physician", "MedicalBusiness"],
       "@id": "https://drerickponceortopeda.com/#physician",
       "name": "Dr. Erick Ponce",
       "alternateName": [
-        "Dr. Erick Ponce - Ortopeda y Traumatólogo",
+        "Dr. Erick Ponce - Cirujano Ortopeda y Traumatólogo",
         "Dr. Erick Ponce Ortopedia SPS",
-        "Erick Ponce Traumatólogo San Pedro Sula"
+        "Erick Ponce Traumatólogo San Pedro Sula",
+        "Ortopeda Dr. Erick Ponce Cortés"
       ],
       "jobTitle": "Cirujano Ortopeda y Traumatólogo",
-      "description": description,
+      "description": "Médico especialista en Ortopedia, Traumatología, Artroscopia y Medicina del Deporte en San Pedro Sula y todo el Valle de Sula. Tratamiento de fracturas, rodilla, hombro y dolor articular.",
       "url": canonicalURL,
       "image": "https://drerickponceortopeda.com/assets/img/dr-erick-ponce-hero.webp",
-      "medicalSpecialty": [
-        "Orthopedic",
-        "SportsMedicine"
-      ],
-      "knowsAbout": [
-        "Cirugía de Rodilla y Artroscopia",
-        "Reparación de Manguito Rotador de Hombro",
-        "Manejo Clínico y Quirúrgico de Fracturas",
-        "Traumatología Deportiva",
-        "Plasma Rico en Plaquetas (PRP) y Viscosuplementación",
-        "Tratamiento de Artrosis y Desgaste Articular",
-        "Ortopedia Pediátrica y del Adulto"
-      ],
+      "logo": "https://drerickponceortopeda.com/assets/img/logo-ep.webp",
       "telephone": "+504-3191-3419",
       "email": "eponce2290@hotmail.com",
       "priceRange": "$$",
+      "currenciesAccepted": "HNL, USD",
+      "paymentAccepted": "Cash, Credit Card, Debit Card, Transfer",
+      "isAcceptingNewPatients": true,
+      "medicalSpecialty": [
+        "https://schema.org/Orthopedic",
+        "https://schema.org/SportsMedicine"
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Hospital Betesda, Clínica Fe y Esperanza y Clínicas Médicas OGYNE (Barrio Medina)",
@@ -59,6 +55,21 @@ const physicianSchema = {
         "latitude": 15.50417,
         "longitude": -88.025
       },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
       "areaServed": [
         {
           "@type": "City",
@@ -107,22 +118,42 @@ const physicianSchema = {
           "name": "Sports Med Academy / Universidad de Ciencias Empresariales y Sociales (UCES), Buenos Aires, Argentina"
         }
       ],
+      "knowsAbout": [
+        "Artroscopia de Rodilla",
+        "Reconstrucción de Ligamento Cruzado Anterior (LCA)",
+        "Sutura y Cirugía de Meniscos",
+        "Reparación Artroscópica del Manguito Rotador",
+        "Cirugía y Reducción de Fracturas Óseas",
+        "Traumatología Pediátrica (Fracturas en Tallo Verde y Supracondíleas)",
+        "Plasma Rico en Plaquetas (PRP) e Infiltraciones Articulares",
+        "Viscosuplementación con Ácido Hialurónico",
+        "Tratamiento Integral de Artrosis de Rodilla y Cadera",
+        "Medicina del Deporte y Traumatología Deportiva",
+        "Dolor Lumbar y Trastornos de Columna"
+      ],
       "availableService": [
         {
           "@type": "MedicalProcedure",
-          "name": "Artroscopia de Rodilla y Hombro"
+          "name": "Cirugía Artroscópica de Rodilla y Hombro",
+          "procedureType": "https://schema.org/SurgicalProcedure",
+          "description": "Procedimiento quirúrgico de mínima invasión para lesiones de meniscos, ligamentos y manguito rotador con rápida recuperación."
         },
         {
           "@type": "MedicalProcedure",
-          "name": "Manejo Quirúrgico y Conservador de Fracturas"
+          "name": "Tratamiento y Osteosíntesis de Fracturas",
+          "procedureType": "https://schema.org/SurgicalProcedure",
+          "description": "Manejo clínico y fijación quirúrgica anatómica de fracturas en niños y adultos las 24 horas del día."
         },
         {
           "@type": "MedicalTherapy",
-          "name": "Terapias Biológicas, Plasma Rico en Plaquetas (PRP) y Viscosuplementación"
+          "name": "Terapia Ortobiológica con Plasma Rico en Plaquetas (PRP)",
+          "description": "Medicina regenerativa articular para control del dolor, desgaste de cartílago y tendinopatías crónicas."
         },
         {
           "@type": "MedicalProcedure",
-          "name": "Medicina Deportiva y Reconstrucción de Ligamento Cruzado"
+          "name": "Consulta y Evaluación de Medicina Deportiva",
+          "procedureType": "https://schema.org/NoninvasiveProcedure",
+          "description": "Diagnóstico físico y protocolo de reintegro funcional seguro para atletas y pacientes activos."
         }
       ],
       "sameAs": [
@@ -154,7 +185,7 @@ const physicianSchema = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Primary SEO Meta Tags -->
+    <!-- Primary SEO Meta Tags (Optimizado para Google SERP: 50-60 caracteres de título, 150-160 de descripción) -->
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
@@ -172,16 +203,16 @@ const physicianSchema = {
     <meta name="geo.position" content="15.50417;-88.02500" />
     <meta name="ICBM" content="15.50417, -88.02500" />
 
-    <!-- GEO (Generative Engine Optimization) Reference -->
+    <!-- GEO (Generative Engine Optimization) References para Asistentes y Modelos de IA -->
     <link rel="help" type="text/plain" title="Contexto Estructurado para IA (LLMs)" href="/llms.txt" />
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="sitemap" type="application/xml" title="Sitemap XML" href="/sitemap.xml" />
 
     <!-- Open Graph / WhatsApp / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_HN" />
     <meta property="og:site_name" content="Dr. Erick Ponce | Ortopedia & Traumatología" />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content="Dr. Erick Ponce | Cirujano Ortopeda y Traumatólogo en San Pedro Sula" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageURL} />
     <meta property="og:image:width" content="1200" />
@@ -191,7 +222,7 @@ const physicianSchema = {
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={canonicalURL} />
-    <meta name="twitter:title" content={title} />
+    <meta name="twitter:title" content="Dr. Erick Ponce | Cirujano Ortopeda y Traumatólogo en San Pedro Sula" />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageURL} />
 
@@ -210,8 +241,8 @@ const physicianSchema = {
       rel="stylesheet"
     />
 
-    <!-- Structured Data JSON-LD (Physician & FAQPage) -->
-    <script type="application/ld+json" set:html={JSON.stringify(physicianSchema)} />
+    <!-- Structured Data JSON-LD (Physician, MedicalBusiness & FAQPage para Google Knowledge Graph e IA) -->
+    <script type="application/ld+json" set:html={JSON.stringify(comprehensiveMedicalSchema)} />
 
     <style is:global>
       /* Anti-scraper CSS reconstruction helpers */

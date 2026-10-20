@@ -4,13 +4,26 @@
 User-agent: *
 Allow: /
 
-# Motores de búsqueda e Inteligencia Artificial (GEO) permitidos explícitamente
+# Motores de búsqueda generales
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Motores de Inteligencia Artificial y Búsqueda Generativa (GEO)
 User-agent: GPTBot
 Allow: /
 
@@ -38,7 +51,28 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-# Bloqueo de bots recolectores de spam y scrapers maliciosos de datos de contacto
+User-agent: Applebot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Bloqueo estricto de recolectores de spam y scrapers maliciosos de datos de contacto
 User-agent: EmailCollector
 Disallow: /
 
