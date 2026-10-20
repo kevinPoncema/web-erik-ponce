@@ -1,5 +1,9 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import { SERVICES_LIST } from '../data/doctorData';
+
+const serviceImages = import.meta.glob<{ default: ImageMetadata }>('../assets/img/servicios/*.webp', { eager: true });
 ---
 
 <section id="servicios" class="py-16 lg:py-24 bg-slate-100/80 border-t border-slate-200/70">
@@ -19,25 +23,43 @@ import { SERVICES_LIST } from '../data/doctorData';
 
     <!-- Responsive Cards Grid: 1 col mobile, 2 cols tablet, 3 cols desktop -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8">
-      {SERVICES_LIST.map((service) => (
-        <article class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-clinical hover:shadow-clinical-lg transition-all duration-300 flex flex-col">
-          <!-- Procedure Image with Category Badge -->
-          <div class="relative overflow-hidden aspect-[3/2] bg-slate-200">
-            <img
-              src={service.image}
-              alt={service.imageAlt}
-              title={`${service.title} en San Pedro Sula - Dr. Erick Ponce`}
-              width="900"
-              height="600"
-              loading="lazy"
-              decoding="async"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-medical-950/60 via-transparent to-transparent"></div>
-            <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-bold bg-medical-900/90 text-white backdrop-blur-sm border border-white/15 shadow-sm">
-              {service.badge}
-            </span>
-          </div>
+      {SERVICES_LIST.map((service) => {
+        const filename = service.image.split('/').pop() || '';
+        const imageModule = serviceImages[`../assets/img/servicios/${filename}`];
+        const imageSrc = imageModule ? imageModule.default : service.image;
+
+        return (
+          <article class="group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-clinical hover:shadow-clinical-lg transition-all duration-300 flex flex-col">
+            <!-- Procedure Image with Category Badge -->
+            <div class="relative overflow-hidden aspect-[3/2] bg-slate-200">
+              {imageModule ? (
+                <Image
+                  src={imageSrc}
+                  alt={service.imageAlt}
+                  title={`${service.title} en San Pedro Sula - Dr. Erick Ponce`}
+                  width={600}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              ) : (
+                <img
+                  src={service.image}
+                  alt={service.imageAlt}
+                  title={`${service.title} en San Pedro Sula - Dr. Erick Ponce`}
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              )}
+              <div class="absolute inset-0 bg-gradient-to-t from-medical-950/60 via-transparent to-transparent"></div>
+              <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-bold bg-medical-900/90 text-white backdrop-blur-sm border border-white/15 shadow-sm">
+                {service.badge}
+              </span>
+            </div>
 
           <!-- Card Content -->
           <div class="p-6 flex-1 flex flex-col justify-between">
@@ -79,7 +101,8 @@ import { SERVICES_LIST } from '../data/doctorData';
             </a>
           </div>
         </article>
-      ))}
+      );
+    })}
     </div>
   </div>
 </section>

@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import consultaImg from '../assets/img/dr-erick-ponce-consulta.webp';
 import { ACADEMIC_CREDENTIALS, DOCTOR_INFO } from '../data/doctorData';
 ---
 
@@ -8,13 +10,11 @@ import { ACADEMIC_CREDENTIALS, DOCTOR_INFO } from '../data/doctorData';
       <!-- Left Column: Professional Photo & Personal Medical Promise (5 cols) -->
       <div class="lg:col-span-5 order-2 lg:order-1">
         <div class="relative mx-auto max-w-md lg:max-w-none">
-          <figure class="rounded-3xl overflow-hidden shadow-clinical border border-slate-200/80 bg-slate-100">
-            <img
-              src="./assets/img/dr-erick-ponce-consulta.webp"
+          <figure class="rounded-3xl overflow-hidden shadow-clinical border border-slate-200/80 bg-slate-100 aspect-[853/1100]">
+            <Image
+              src={consultaImg}
               alt="Dr. Erick Ponce en consulta médica de ortopedia y traumatología evaluando modelo anatómico óseo en San Pedro Sula, Choloma y Villanueva"
               title="Dr. Erick Ponce - Evaluación y consulta ortopédica en San Pedro Sula"
-              width="853"
-              height="1100"
               loading="lazy"
               decoding="async"
               class="w-full h-auto object-cover"
