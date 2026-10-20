@@ -369,15 +369,16 @@ const comprehensiveMedicalSchema = {
       @keyframes subtle-pulse {
         0%, 100% {
           transform: scale(1);
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+          opacity: 1;
         }
         50% {
-          transform: scale(1.04);
-          box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+          transform: scale(1.06);
+          opacity: 0.92;
         }
       }
       .animate-wa-pulse {
         animation: subtle-pulse 2.6s infinite cubic-bezier(0.4, 0, 0.6, 1);
+        will-change: transform, opacity;
       }
     </style>
   </head>
