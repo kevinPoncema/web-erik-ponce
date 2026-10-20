@@ -30,14 +30,26 @@ export interface PatientResourceItem {
 
 export const DOCTOR_INFO = {
   name: "Dr. Erick Ponce",
-  fullTitle: "Dr. Erick Ponce | Cirujano Ortopeda y Traumatólogo en San Pedro Sula",
+  fullTitle: "Dr. Erick Ponce | Cirujano Ortopeda y Traumatólogo en San Pedro Sula y Valle de Sula",
   brandName: "Dr. Erick Ponce",
   brandSubtitle: "Ortopedia & Traumatología",
   specialty: "Cirujano Ortopeda y Traumatólogo",
   city: "San Pedro Sula",
   department: "Cortés",
+  region: "Valle de Sula y Noroccidente de Honduras",
   country: "Honduras",
   postalCode: "211101",
+  coverageAreas: [
+    "San Pedro Sula",
+    "Choloma",
+    "Villanueva",
+    "La Lima",
+    "El Progreso (Yoro)",
+    "Puerto Cortés",
+    "Cofradía",
+    "Santa Cruz de Yojoa",
+    "Valle de Sula y Noroccidente de Honduras"
+  ],
   // Obfuscated chunks for anti-scraper reconstruction on client
   phoneDisplayParts: ["+504", "3191", "3419"],
   phoneRawEncoded: "KzUwNDMxOTEzNDE5", // Base64 for +50431913419
@@ -88,7 +100,7 @@ export const METRICS_BAR = [
   },
   {
     title: "Atención en Centros Quirúrgicos de SPS",
-    subtitle: "Hospital Betesda, Clínica Fe y Esperanza y centros aliados",
+    subtitle: "Hospital Betesda, Clínica Fe y Esperanza y centros aliados en SPS y Valle de Sula",
     icon: "hospital",
   },
 ];
@@ -236,20 +248,20 @@ export const PATIENT_RESOURCES: PatientResourceItem[] = [
 
 export const FAQ_LIST: FaqItem[] = [
   {
-    question: "¿Cómo agendo mi cita?",
-    answer: "Puedes agendar tu consulta médica de forma rápida y directa haciendo clic en cualquiera de los botones de WhatsApp de este sitio web o comunicándote al +504 3191-3419. Nuestro equipo coordinará el día, horario y centro médico en San Pedro Sula (Hospital Betesda, Clínica Fe y Esperanza, Clínicas Médicas OGYNE o centros aliados) que mejor se adapte a tu ubicación.",
+    question: "¿Cómo agendo mi cita con el Dr. Erick Ponce?",
+    answer: "Puedes agendar tu consulta médica de forma rápida y directa haciendo clic en cualquiera de los botones de WhatsApp de este sitio web o llamando al +504 3191-3419. Atendemos a pacientes de San Pedro Sula, Choloma, Villanueva, El Progreso, La Lima y alrededores, coordinando el centro médico (Hospital Betesda, Clínica Fe y Esperanza, Clínicas Médicas OGYNE u hospitales aliados) que te resulte más accesible.",
   },
   {
-    question: "¿Qué debo llevar a mi primera consulta?",
-    answer: "Te recomendamos traer tus estudios de imagen previos si cuentas con ellos (radiografías, resonancia magnética, ultrasonidos o tomografías en físico o digital), una lista de los medicamentos que tomas actualmente, antecedentes médicos relevantes y tu documento de identidad. Si aún no tienes estudios, el Dr. Erick Ponce te indicará únicamente los exámenes necesarios tras tu evaluación física.",
+    question: "¿Qué debo llevar a mi primera consulta ortopédica?",
+    answer: "Te recomiendo traer tus estudios de imagen previos si ya cuentas con ellos (radiografías, resonancia magnética, tomografías o ultrasonidos, ya sea en físico o en formato digital), antecedentes médicos relevantes y una lista de los medicamentos que tomas. Si aún no te has realizado estudios, durante tu consulta física evaluaré tu caso e indicaré únicamente los exámenes estrictamente necesarios.",
   },
   {
-    question: "¿Atiende emergencias por fracturas?",
-    answer: "Sí. El Dr. Erick Ponce brinda atención especializada para urgencias traumatológicas como fracturas en adultos y niños (incluyendo fracturas en tallo verde y supracondíleas), luxaciones articulares y lesiones deportivas agudas en centros quirúrgicos y hospitalarios de San Pedro Sula. Contáctanos de inmediato por llamada o WhatsApp al +504 3191-3419 para priorizar tu atención.",
+    question: "¿Atiende emergencias por fracturas en San Pedro Sula y alrededores?",
+    answer: "Sí. Brindo atención prioritaria para urgencias traumatológicas como fracturas en adultos y niños (incluyendo fracturas pediátricas en tallo verde y supracondíleas), luxaciones y lesiones deportivas agudas en centros quirúrgicos y hospitalarios de San Pedro Sula las 24 horas del día. Puedes comunicarte de inmediato al +504 3191-3419 para coordinar la recepción hospitalaria.",
   },
   {
-    question: "¿Realiza valoraciones para cirugía de rodilla u hombro?",
-    answer: "Por supuesto. Como cirujano ortopeda con Fellowship en Artroscopia y Medicina del Deporte en Buenos Aires, Argentina, el Dr. Erick Ponce realiza valoraciones integrales y segundas opiniones para cirugía artroscópica de rodilla (meniscos, ligamento cruzado) y hombro (manguito rotador, inestabilidad), priorizando siempre el tratamiento conservador u ortobiológico cuando es viable, o técnicas de mínima invasión para una recuperación más rápida.",
+    question: "¿Realiza valoraciones y segunda opinión para cirugía de rodilla u hombro?",
+    answer: "Por supuesto. Cuento con formación de posgrado en Ortopedia y Traumatología y un Fellowship en Artroscopia y Medicina del Deporte en Buenos Aires, Argentina. Realizo valoraciones integrales y segundas opiniones quirúrgicas para lesiones de meniscos, ligamento cruzado y rupturas del manguito rotador, priorizando siempre alternativas conservadoras y ortobiológicas (PRP) cuando son viables, o técnicas artroscópicas de mínima invasión.",
   },
 ];
 

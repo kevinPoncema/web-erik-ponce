@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = "Dr. Erick Ponce | Ortopeda y Traumatólogo en San Pedro Sula",
-  description = "Consulta con el Dr. Erick Ponce en San Pedro Sula. Especialista en Ortopedia, Traumatología, lesiones de rodilla, manguito rotador y fracturas. Agenda al +504 3191-3419.",
+  title = "Dr. Erick Ponce | Ortopeda y Traumatólogo en San Pedro Sula y Alrededores",
+  description = "Consulta médica con el Dr. Erick Ponce en San Pedro Sula y todo el Valle de Sula (Choloma, Villanueva, El Progreso, La Lima). Especialista en Ortopedia, Traumatología, artroscopia de rodilla, fracturas y manguito rotador. Agenda al +504 3191-3419.",
 } = Astro.props;
 
 const canonicalURL = "https://drerickponceortopeda.com/";
@@ -21,7 +21,11 @@ const physicianSchema = {
       "@type": "Physician",
       "@id": "https://drerickponceortopeda.com/#physician",
       "name": "Dr. Erick Ponce",
-      "alternateName": "Dr. Erick Ponce - Ortopeda y Traumatólogo",
+      "alternateName": [
+        "Dr. Erick Ponce - Ortopeda y Traumatólogo",
+        "Dr. Erick Ponce Ortopedia SPS",
+        "Erick Ponce Traumatólogo San Pedro Sula"
+      ],
       "jobTitle": "Cirujano Ortopeda y Traumatólogo",
       "description": description,
       "url": canonicalURL,
@@ -29,6 +33,15 @@ const physicianSchema = {
       "medicalSpecialty": [
         "Orthopedic",
         "SportsMedicine"
+      ],
+      "knowsAbout": [
+        "Cirugía de Rodilla y Artroscopia",
+        "Reparación de Manguito Rotador de Hombro",
+        "Manejo Clínico y Quirúrgico de Fracturas",
+        "Traumatología Deportiva",
+        "Plasma Rico en Plaquetas (PRP) y Viscosuplementación",
+        "Tratamiento de Artrosis y Desgaste Articular",
+        "Ortopedia Pediátrica y del Adulto"
       ],
       "telephone": "+504-3191-3419",
       "email": "eponce2290@hotmail.com",
@@ -52,8 +65,32 @@ const physicianSchema = {
           "name": "San Pedro Sula"
         },
         {
+          "@type": "City",
+          "name": "Choloma"
+        },
+        {
+          "@type": "City",
+          "name": "Villanueva"
+        },
+        {
+          "@type": "City",
+          "name": "La Lima"
+        },
+        {
+          "@type": "City",
+          "name": "El Progreso"
+        },
+        {
+          "@type": "City",
+          "name": "Puerto Cortés"
+        },
+        {
           "@type": "AdministrativeArea",
-          "name": "Cortés, Honduras"
+          "name": "Valle de Sula"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Departamento de Cortés, Honduras"
         }
       ],
       "alumniOf": [
@@ -123,15 +160,15 @@ const physicianSchema = {
     <meta name="description" content={description} />
     <meta
       name="keywords"
-      content="ortopeda en san pedro sula, traumatologo sps, cirujano ortopedico honduras, artroscopia rodilla sps, manguito rotador, clinica ortopedica san pedro sula, dr erick ponce"
+      content="ortopeda en san pedro sula, traumatologo sps, ortopeda san pedro sula y alrededores, ortopeda valle de sula, traumatologo choloma, ortopeda villanueva cortes, traumatologo el progreso yoro, ortopeda la lima, cirujano ortopedico honduras, artroscopia rodilla sps, cirugia manguito rotador san pedro sula, urgencias fracturas sps, clinica ortopedica san pedro sula, hospital betesda ortopedia, clinica fe y esperanza, clinicas ogyne barrio medina, plasma rico en plaquetas rodilla sps, dr erick ponce ortopeda"
     />
     <meta name="author" content="Dr. Erick Ponce" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href={canonicalURL} />
 
-    <!-- Local SEO Geo Meta Tags (San Pedro Sula, Cortés, Honduras) -->
+    <!-- Local SEO Geo Meta Tags (San Pedro Sula, Valle de Sula, Cortés, Honduras) -->
     <meta name="geo.region" content="HN-CR" />
-    <meta name="geo.placename" content="San Pedro Sula, Cortés, Honduras" />
+    <meta name="geo.placename" content="San Pedro Sula y Valle de Sula, Cortés, Honduras" />
     <meta name="geo.position" content="15.50417;-88.02500" />
     <meta name="ICBM" content="15.50417, -88.02500" />
 
