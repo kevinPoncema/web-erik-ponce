@@ -1,0 +1,429 @@
+---
+import { DOCTOR_INFO, FAQ_LIST } from '../data/doctorData';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Dr. Erick Ponce | Ortopeda y Traumatólogo en San Pedro Sula",
+  description = "Consulta con el Dr. Erick Ponce en San Pedro Sula. Especialista en Ortopedia, Traumatología, lesiones de rodilla, manguito rotador y fracturas. Agenda al +504 3191-3419.",
+} = Astro.props;
+
+const canonicalURL = "https://drerickponceortopeda.com/";
+const ogImageURL = "https://drerickponceortopeda.com/assets/img/og-dr-erick-ponce.webp";
+
+const physicianSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Physician",
+      "@id": "https://drerickponceortopeda.com/#physician",
+      "name": "Dr. Erick Ponce",
+      "alternateName": "Dr. Erick Ponce - Ortopeda y Traumatólogo",
+      "jobTitle": "Cirujano Ortopeda y Traumatólogo",
+      "description": description,
+      "url": canonicalURL,
+      "image": "https://drerickponceortopeda.com/assets/img/dr-erick-ponce-hero.webp",
+      "medicalSpecialty": [
+        "Orthopedic",
+        "SportsMedicine"
+      ],
+      "telephone": "+504-3191-3419",
+      "email": "eponce2290@hotmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hospital Betesda, Clínica Fe y Esperanza y Clínicas Médicas OGYNE (Barrio Medina)",
+        "addressLocality": "San Pedro Sula",
+        "addressRegion": "Cortés",
+        "postalCode": "211101",
+        "addressCountry": "HN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 15.50417,
+        "longitude": -88.025
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "San Pedro Sula"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Cortés, Honduras"
+        }
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidad Nacional Autónoma de Honduras en el Valle de Sula (UNAH-VS)"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Centro Médico Militar / Universidad Mariano Gálvez de Guatemala"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Sports Med Academy / Universidad de Ciencias Empresariales y Sociales (UCES), Buenos Aires, Argentina"
+        }
+      ],
+      "availableService": [
+        {
+          "@type": "MedicalProcedure",
+          "name": "Artroscopia de Rodilla y Hombro"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Manejo Quirúrgico y Conservador de Fracturas"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Terapias Biológicas, Plasma Rico en Plaquetas (PRP) y Viscosuplementación"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Medicina Deportiva y Reconstrucción de Ligamento Cruzado"
+        }
+      ],
+      "sameAs": [
+        DOCTOR_INFO.instagramUrl,
+        DOCTOR_INFO.doctoresDeHondurasUrl,
+        DOCTOR_INFO.whatsappApiUrl
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://drerickponceortopeda.com/#faq",
+      "mainEntity": FAQ_LIST.map((item) => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
+    }
+  ]
+};
+---
+
+<!doctype html>
+<html lang="es-HN" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="ortopeda en san pedro sula, traumatologo sps, cirujano ortopedico honduras, artroscopia rodilla sps, manguito rotador, clinica ortopedica san pedro sula, dr erick ponce"
+    />
+    <meta name="author" content="Dr. Erick Ponce" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Local SEO Geo Meta Tags (San Pedro Sula, Cortés, Honduras) -->
+    <meta name="geo.region" content="HN-CR" />
+    <meta name="geo.placename" content="San Pedro Sula, Cortés, Honduras" />
+    <meta name="geo.position" content="15.50417;-88.02500" />
+    <meta name="ICBM" content="15.50417, -88.02500" />
+
+    <!-- GEO (Generative Engine Optimization) Reference -->
+    <link rel="help" type="text/plain" title="Contexto Estructurado para IA (LLMs)" href="/llms.txt" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+    <!-- Open Graph / WhatsApp / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_HN" />
+    <meta property="og:site_name" content="Dr. Erick Ponce | Ortopedia & Traumatología" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Dr. Erick Ponce - Cirujano Ortopeda y Traumatólogo en San Pedro Sula, Honduras" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+
+    <!-- Favicon SVG Clínico -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230c3f6e'/%3E%3Cpath d='M28 16h8v12h12v8H36v12h-8V36H16v-8h12V16z' fill='%2336aaf5'/%3E%3C/svg%3E"
+    />
+
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured Data JSON-LD (Physician & FAQPage) -->
+    <script type="application/ld+json" set:html={JSON.stringify(physicianSchema)} />
+
+    <style is:global>
+      /* Anti-scraper CSS reconstruction helpers */
+      .obf-item {
+        unicode-bidi: bidi-override;
+        direction: ltr;
+      }
+      .hp-field {
+        position: absolute !important;
+        left: -9999px !important;
+        width: 1px !important;
+        height: 1px !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+      @keyframes subtle-pulse {
+        0%, 100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+        }
+        50% {
+          transform: scale(1.04);
+          box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+        }
+      }
+      .animate-wa-pulse {
+        animation: subtle-pulse 2.6s infinite cubic-bezier(0.4, 0, 0.6, 1);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-medical-600 selection:text-white overflow-x-hidden">
+    <slot />
+
+    <!-- Vanilla JS: Mobile Menu, Smooth Scroll, FAQ Accordion & Multi-Layer Anti-Scraper Contact Protection -->
+    <script is:inline>
+      (function () {
+        "use strict";
+
+        // 1. MULTI-LAYER ANTI-SCRAPER & ANTI-SPAM CONTACT SHIELD
+        // Contacts are Base64 encoded and split so static HTML regex bots cannot harvest emails/phones.
+        var _waPhone = atob("NTA0MzE5MTM0MTk="); // 50431913419
+        var _telRaw = atob("KzUwNDMxOTEzNDE5"); // +50431913419
+        var _telDisplay = "+504 3191-3419";
+        var _mailUser = atob("ZXBvbmNlMjI5MA=="); // eponce2290
+        var _mailDomain = atob("aG90bWFpbC5jb20="); // hotmail.com
+        var _fullEmail = _mailUser + "@" + _mailDomain;
+        var _defaultMsg = "Hola Dr. Erick Ponce, quisiera agendar una consulta médica.";
+
+        function buildWhatsAppUrl(customMsg, useApiFormat) {
+          var text = encodeURIComponent(customMsg || _defaultMsg);
+          if (useApiFormat) {
+            return "https://api.whatsapp.com/send/?phone=%2B" + _waPhone + "&text=" + text + "&type=phone_number&app_absent=0";
+          }
+          return "https://wa.me/" + _waPhone + "?text=" + text;
+        }
+
+        function hydrateProtectedContacts() {
+          // Hydrate text placeholders for human viewers
+          var emailNodes = document.querySelectorAll("[data-obf-email]");
+          emailNodes.forEach(function (node) {
+            node.textContent = _fullEmail;
+          });
+
+          var phoneNodes = document.querySelectorAll("[data-obf-phone]");
+          phoneNodes.forEach(function (node) {
+            node.textContent = _telDisplay;
+          });
+
+          // Attach dynamic href resolution on human interaction (hover, focus, touchstart, click)
+          var protectedLinks = document.querySelectorAll("[data-protected-contact]");
+          protectedLinks.forEach(function (el) {
+            function armLink() {
+              var type = el.getAttribute("data-protected-contact");
+              var customMsg = el.getAttribute("data-wa-text") || _defaultMsg;
+              var useApi = el.getAttribute("data-wa-api") === "true";
+
+              if (type === "whatsapp") {
+                el.setAttribute("href", buildWhatsAppUrl(customMsg, useApi));
+              } else if (type === "tel") {
+                el.setAttribute("href", "tel:" + _telRaw);
+              } else if (type === "email") {
+                var subj = encodeURIComponent("Consulta Médica - Sitio Web Dr. Erick Ponce");
+                el.setAttribute("href", "mailto:" + _fullEmail + "?subject=" + subj);
+              }
+            }
+
+            ["pointerenter", "focus", "touchstart", "mousedown"].forEach(function (evt) {
+              el.addEventListener(evt, armLink, { passive: true, once: true });
+            });
+
+            el.addEventListener("click", function (e) {
+              armLink();
+              var href = el.getAttribute("href");
+              if (!href || href === "#contacto-seguro" || href === "#") {
+                e.preventDefault();
+                armLink();
+                var resolved = el.getAttribute("href");
+                if (resolved && resolved !== "#") {
+                  window.open(resolved, el.getAttribute("target") || "_self");
+                }
+              }
+            });
+          });
+        }
+
+        // 2. RESPONSIVE MOBILE HAMBURGER MENU
+        function initMobileMenu() {
+          var menuBtn = document.getElementById("mobile-menu-btn");
+          var mobileMenu = document.getElementById("mobile-menu");
+          var iconOpen = document.getElementById("menu-icon-open");
+          var iconClose = document.getElementById("menu-icon-close");
+
+          if (!menuBtn || !mobileMenu) return;
+
+          function toggleMenu(forceClose) {
+            var isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+            var nextState = forceClose ? false : !isExpanded;
+            menuBtn.setAttribute("aria-expanded", String(nextState));
+            if (nextState) {
+              mobileMenu.classList.remove("hidden");
+              if (iconOpen) iconOpen.classList.add("hidden");
+              if (iconClose) iconClose.classList.remove("hidden");
+            } else {
+              mobileMenu.classList.add("hidden");
+              if (iconOpen) iconOpen.classList.remove("hidden");
+              if (iconClose) iconClose.classList.add("hidden");
+            }
+          }
+
+          menuBtn.addEventListener("click", function () {
+            toggleMenu(false);
+          });
+
+          // Close mobile menu when clicking any anchor link inside it
+          var mobileLinks = mobileMenu.querySelectorAll("a[href^='#']");
+          mobileLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+              toggleMenu(true);
+            });
+          });
+        }
+
+        // 3. SMOOTH SCROLL FOR ANCHOR LINKS (#inicio, #especialista, #servicios, #preguntas, #contacto)
+        function initSmoothScroll() {
+          var anchorLinks = document.querySelectorAll('a[href^="#"]');
+          anchorLinks.forEach(function (anchor) {
+            anchor.addEventListener("click", function (e) {
+              var targetId = anchor.getAttribute("href");
+              if (!targetId || targetId === "#" || targetId === "#contacto-seguro") return;
+              var targetEl = document.querySelector(targetId);
+              if (targetEl) {
+                e.preventDefault();
+                var headerOffset = 84;
+                var elementPosition = targetEl.getBoundingClientRect().top;
+                var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: "smooth",
+                });
+                history.pushState(null, "", targetId);
+              }
+            });
+          });
+        }
+
+        // 4. COLLAPSIBLE ACCORDION FOR FAQ & PATIENT RESOURCES
+        function initAccordions() {
+          var triggers = document.querySelectorAll("[data-accordion-trigger]");
+          triggers.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+              var group = btn.getAttribute("data-accordion-group") || "default";
+              var contentId = btn.getAttribute("aria-controls");
+              var content = contentId ? document.getElementById(contentId) : null;
+              var icon = btn.querySelector("[data-accordion-icon]");
+              var isExpanded = btn.getAttribute("aria-expanded") === "true";
+
+              // Close siblings in same group for clean UX
+              var groupTriggers = document.querySelectorAll('[data-accordion-group="' + group + '"]');
+              groupTriggers.forEach(function (otherBtn) {
+                if (otherBtn !== btn) {
+                  otherBtn.setAttribute("aria-expanded", "false");
+                  var otherId = otherBtn.getAttribute("aria-controls");
+                  var otherContent = otherId ? document.getElementById(otherId) : null;
+                  var otherIcon = otherBtn.querySelector("[data-accordion-icon]");
+                  if (otherContent) otherContent.classList.add("hidden");
+                  if (otherIcon) otherIcon.classList.remove("rotate-180");
+                }
+              });
+
+              // Toggle clicked item
+              var nextExpanded = !isExpanded;
+              btn.setAttribute("aria-expanded", String(nextExpanded));
+              if (content) {
+                content.classList.toggle("hidden", !nextExpanded);
+              }
+              if (icon) {
+                icon.classList.toggle("rotate-180", nextExpanded);
+              }
+            });
+          });
+        }
+
+        // 5. ANTI-BOT PROTECTED QUICK APPOINTMENT FORM -> WHATSAPP DISPATCHER
+        function initQuickContactForm() {
+          var form = document.getElementById("quick-appointment-form");
+          if (!form) return;
+          var formLoadTime = Date.now();
+
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var honeypot = form.querySelector('input[name="website_hp"]');
+            var elapsed = Date.now() - formLoadTime;
+
+            // Block automated bots filling hidden honeypot or submitting in < 1.2s
+            if ((honeypot && honeypot.value.trim() !== "") || elapsed < 1200) {
+              console.warn("Envío automatizado bloqueado por filtro anti-spam.");
+              return;
+            }
+
+            var nameInput = form.querySelector('input[name="patient_name"]');
+            var phoneInput = form.querySelector('input[name="patient_phone"]');
+            var serviceSelect = form.querySelector('select[name="patient_service"]');
+            var notesInput = form.querySelector('textarea[name="patient_notes"]');
+
+            var name = nameInput ? nameInput.value.trim() : "";
+            var phone = phoneInput ? phoneInput.value.trim() : "";
+            var service = serviceSelect ? serviceSelect.value.trim() : "Consulta General";
+            var notes = notesInput ? notesInput.value.trim() : "";
+
+            var msg =
+              "Hola Dr. Erick Ponce, me gustaría agendar una cita médica.\n\n" +
+              "• *Paciente:* " + (name || "Por confirmar") + "\n" +
+              "• *Teléfono:* " + (phone || "Por confirmar") + "\n" +
+              "• *Motivo / Especialidad:* " + service +
+              (notes ? "\n• *Detalle:* " + notes : "");
+
+            var url = buildWhatsAppUrl(msg, true);
+            window.open(url, "_blank", "noopener,noreferrer");
+          });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          hydrateProtectedContacts();
+          initMobileMenu();
+          initSmoothScroll();
+          initAccordions();
+          initQuickContactForm();
+        });
+      })();
+    </script>
+  </body>
+</html>
