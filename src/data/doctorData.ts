@@ -59,6 +59,7 @@ export const DOCTOR_INFO = {
   instagramHandle: "@dr.erickponceortopeda",
   instagramUrl: "https://www.instagram.com/dr.erickponceortopeda/",
   doctoresDeHondurasUrl: "https://doctoresdehonduras.com/doctores/detalles/1144",
+  googleReviewsUrl: "https://share.google/kmUuJdPVSDUFEKli0",
   whatsappApiUrl: "https://api.whatsapp.com/send/?phone=%2B50431913419&text=Hola%20Dr.%20Erick%20Ponce,%20quisiera%20agendar%20una%20consulta%20m%C3%A9dica.&type=phone_number&app_absent=0",
   whatsappFabUrl: "https://wa.me/50431913419?text=Hola%20Dr.%20Erick%20Ponce,%20quisiera%20agendar%20una%20consulta%20médica.",
   siteUrl: "https://drerickponceortopeda.com",

@@ -1,0 +1,47 @@
+{
+  "googleProfileUrl": "https://share.google/kmUuJdPVSDUFEKli0",
+  "averageRating": 5.0,
+  "totalReviews": 3,
+  "platform": "Google Reviews",
+  "reviews": [
+    {
+      "id": "rev-diana-davis",
+      "author": "Diana Davis",
+      "initials": "DD",
+      "rating": 5,
+      "date": "2024-10-15",
+      "displayDate": "Octubre 2024",
+      "comment": "Excelente médico ! De los mejores ortopedas en San Pedro Sula ! Muy buena atención 👏 más que recomendado!",
+      "source": "Google Reviews",
+      "verified": true
+    },
+    {
+      "id": "rev-eloisa-benitez",
+      "author": "Eloisa Benitez",
+      "initials": "EB",
+      "rating": 5,
+      "date": "2024-09-20",
+      "displayDate": "Septiembre 2024",
+      "comment": "Excelente Ortopeda y podria decir: el mejor que he conocido,tiene mucha experiencia en lo que se le solicita. Full recomendado. 100% 😊",
+      "source": "Google Reviews",
+      "verified": true,
+      "ownerReply": {
+        "author": "Dr. Erick Ponce",
+        "role": "Cirujano Ortopeda y Traumatólogo",
+        "date": "2024-09-21",
+        "text": "Gracias, es un gusto poder servirle y ver su mejoría. Dios le bendiga"
+      }
+    },
+    {
+      "id": "rev-rigoberto-ramirez",
+      "author": "Rigoberto Ramirez",
+      "initials": "RR",
+      "rating": 5,
+      "date": "2024-08-10",
+      "displayDate": "Agosto 2024",
+      "comment": "Excelente atención🙌 Muy profesional y admirable en su trabajo",
+      "source": "Google Reviews",
+      "verified": true
+    }
+  ]
+}

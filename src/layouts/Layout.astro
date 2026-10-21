@@ -1,5 +1,6 @@
 ---
 import { DOCTOR_INFO, FAQ_LIST } from '../data/doctorData';
+import reviewsData from '../data/reviews.json';
 
 interface Props {
   title?: string;
@@ -165,8 +166,31 @@ const comprehensiveMedicalSchema = {
       "sameAs": [
         DOCTOR_INFO.instagramUrl,
         DOCTOR_INFO.doctoresDeHondurasUrl,
+        DOCTOR_INFO.googleReviewsUrl,
         DOCTOR_INFO.whatsappApiUrl
-      ]
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": reviewsData.averageRating.toFixed(1),
+        "reviewCount": String(reviewsData.totalReviews),
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": reviewsData.reviews.map((r) => ({
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": r.author
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": r.rating,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "datePublished": r.date,
+        "reviewBody": r.comment
+      }))
     },
     {
       "@type": "FAQPage",
