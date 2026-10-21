@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import logoImg from '../assets/img/logo-ep.webp';
+import logoImg from '../assets/img/logo-dr-erik-icon.webp';
 
 const navLinks = [
   { label: "Inicio", href: "#inicio" },
@@ -16,14 +16,14 @@ const navLinks = [
     <div class="flex items-center justify-between h-20">
       <!-- Brand / Logo -->
       <a href="#inicio" class="flex items-center gap-3 group focus:outline-none">
-        <div class="w-12 h-12 rounded-xl overflow-hidden bg-[#04566e] flex items-center justify-center shadow-md group-hover:scale-105 transition-transform border border-medical-200/60">
+        <div class="w-12 h-12 rounded-xl overflow-hidden bg-[#005768] flex items-center justify-center shadow-md group-hover:scale-105 transition-transform border border-medical-200/60">
           <Image
             src={logoImg}
             alt="Logo Oficial Dr. Erick Ponce Ortopeda y Traumatólogo en San Pedro Sula"
             title="Dr. Erick Ponce - Ortopedia y Traumatología"
-            width={92}
-            height={70}
-            class="w-full h-full object-contain p-1"
+            width={96}
+            height={96}
+            class="w-full h-full object-cover"
           />
         </div>
         <div class="flex flex-col">

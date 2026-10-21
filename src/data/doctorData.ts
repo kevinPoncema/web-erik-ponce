@@ -249,7 +249,7 @@ export const PATIENT_RESOURCES: PatientResourceItem[] = [
 export const FAQ_LIST: FaqItem[] = [
   {
     question: "¿Cómo agendo mi cita con el Dr. Erick Ponce?",
-    answer: "Puedes agendar tu consulta médica de forma rápida y directa haciendo clic en cualquiera de los botones de WhatsApp de este sitio web o llamando al +504 3191-3419. Atendemos a pacientes de San Pedro Sula, Choloma, Villanueva, El Progreso, La Lima y alrededores, coordinando el centro médico (Hospital Betesda, Clínica Fe y Esperanza, Clínicas Médicas OGYNE u hospitales aliados) que te resulte más accesible.",
+    answer: "Puedes agendar tu consulta médica de forma rápida y directa haciendo clic en cualquiera de los botones de WhatsApp de este sitio web o llamando al +504 3191-3419. Atendemos a pacientes de San Pedro Sula, Choloma, Villanueva, El Progreso, La Lima y alrededores, coordinando el centro médico (Hospital Betesda, Clínica Fe y Esperanza, Hospital Militar Regional del Norte u hospitales aliados) que te resulte más accesible.",
   },
   {
     question: "¿Qué debo llevar a mi primera consulta ortopédica?",
@@ -277,8 +277,8 @@ export const CLINIC_LOCATIONS = [
     type: "Consulta Externa Especializada y Valoración Ortopédica",
   },
   {
-    name: "Clínicas Médicas OGYNE y Centros Aliados",
-    area: "Barrio Medina y Centros Quirúrgicos de San Pedro Sula",
+    name: "Hospital Militar Regional del Norte",
+    area: "San Pedro Sula, Cortés",
     type: "Consulta Ortopédica, Infiltraciones y Cirugía Ambulatoria",
   },
 ];
